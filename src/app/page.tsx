@@ -1,5 +1,5 @@
 import Navbar from "./Component/Navbar/Navbar";
-import Footer from "./Component/Navbar/shared/Footer/page";
+import Footer from "./Component/Navbar/shared/Footer/Footer";
 import FirstPage from "./Component/Navbar/shared/Footer/FirstPage/page";
 import { Crete_Round } from "next/font/google";
 
@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <>
       <div className={`${creteRound.variable} font-serif`}>
-      <Navbar />
-     <FirstPage/>
-      <Footer/>
-       </div>
-     
+        <Navbar />
+        <FirstPage />
+        <Footer />
+      </div>
+
     </>
   );
 }

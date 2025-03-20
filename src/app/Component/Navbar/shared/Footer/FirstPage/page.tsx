@@ -1,10 +1,11 @@
+import Banner from "../Banner/Banner";
 
 export default function Home() {
   return (
     <>
      
           <p>
-          hi its 
+        <Banner/>
           </p>
           
       
