@@ -33,10 +33,10 @@ const Login: React.FC = () => {
           Please Login
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-16 justify-center items-center m-auto">
           {/* Google Login */}
           <button
-            className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200 transition-all duration-300"
+            className="flex items-center justify-center m-auto w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200 transition-all duration-300"
             onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
             data-aos="zoom-in"
             data-aos-delay="300"
@@ -46,7 +46,7 @@ const Login: React.FC = () => {
 
           {/* GitHub Login */}
           <button
-            className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200 transition-all duration-300"
+            className="flex items-center m-auto justify-center w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200 transition-all duration-300"
             onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
             data-aos="zoom-in"
             data-aos-delay="500"
