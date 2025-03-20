@@ -15,7 +15,7 @@ const Login: React.FC = () => {
   return (
     <div className={`${creteRound.variable} font-serif`}>
       <div className="flex items-center justify-center min-h-[500px] ">
-        <div className="p-24 rounded-lg shadow-md bg-yellow-100">
+        <div className="md:p-24 sm:p-16 py-4 rounded-lg shadow-md bg-yellow-100">
           <h1 className="text-center text-5xl mb-12">Please Login</h1>
 
           <div className="grid md:grid-cols-2 sm:grid-cols-1 justify-center gap-16">
