@@ -8,6 +8,15 @@ import { RiMenu2Line } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
 import { Crete_Round } from "next/font/google";
+import { signOut } from "next-auth/react";
+
+type UserProps = {
+  user?: {
+    name?: string | null | undefined;
+    email?: string | null | undefined;
+    image?: string | null | undefined;
+  }
+}
 
 const creteRound = Crete_Round({
   subsets: ["latin"],
@@ -15,7 +24,7 @@ const creteRound = Crete_Round({
   variable: "--font-crete-round",
 });
 
-const Navbar: React.FC = () => {
+const Navbar = ({ session }: { session: UserProps | null }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   const toggleMobileMenu = (): void => {
@@ -26,7 +35,7 @@ const Navbar: React.FC = () => {
     <div className={`${creteRound.variable} font-serif`}>
       <div className="bg-gradient-to-r from-green-900 to-black sticky top-0 z-20">
         <nav className="flex max-w-[1500px] m-auto px-4 py-5 justify-between items-center">
-          
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-white">
             <Image src="/asset/icon.png" width={50} height={50} alt="Logo" />
@@ -38,7 +47,13 @@ const Navbar: React.FC = () => {
             <li><Link href="/" className="hover:text-yellow-500">Home</Link></li>
             <li><Link href="/event" className="hover:text-yellow-500">Event</Link></li>
             <li><Link href="/contact" className="hover:text-yellow-500">Contact</Link></li>
-            <li><Link href="/login" className="hover:text-yellow-500">Login</Link></li>
+            {session?.user ? (
+              <li><Link onClick={() => signOut()} href="/login" className="hover:text-yellow-500">LogOut</Link></li>
+            ) : (
+              <li><Link onClick={() => signOut()} href="/login" className="hover:text-yellow-500">LogIn</Link></li>
+            )}
+
+            
           </ul>
 
           {/* Icons */}
@@ -56,9 +71,8 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed top-0 right-0 w-3/4 h-full bg-white text-black p-6 transform transition-transform ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed top-0 right-0 w-3/4 h-full bg-white text-black p-6 transform transition-transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <button className="absolute top-5 right-5" onClick={toggleMobileMenu}>
             <FaTimes size={24} />
