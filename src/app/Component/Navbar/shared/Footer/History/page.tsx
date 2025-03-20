@@ -22,7 +22,7 @@ const History: React.FC = () => {
                         {prayerTimes.map((prayer, index) => (
                             <div key={index} className="flex flex-col items-center">
                                 <p className="font-serif text-lg md:text-2xl font-bold">{prayer.name}</p>
-                                <p className="text-sm md:text-base font-semibold">{prayer.time}</p>
+                                {/* <p className="text-sm md:text-base font-semibold">{prayer.time}</p> */}
                             </div>
                         ))}
                     </div>
