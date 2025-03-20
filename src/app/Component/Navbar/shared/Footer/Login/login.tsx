@@ -23,7 +23,7 @@ const Login: React.FC = () => {
             {/* Google Login */}
             <button
               className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200"
-            //   onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/dashboard" })}
+              onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/dashboard" })}
             >
               <FcGoogle size={80} />
             </button>

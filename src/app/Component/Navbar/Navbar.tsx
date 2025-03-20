@@ -52,7 +52,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
             ) : (
               <li><Link onClick={() => signOut()} href="/login" className="hover:text-yellow-500">LogIn</Link></li>
             )}
-
+<li><Link href="/dashboard" className="hover:text-yellow-500">Dashboard</Link></li>
             
           </ul>
 

@@ -13,6 +13,7 @@ const DashboardPage = async () => {
     <div className="py-24 justify-center text-center items-center m-auto ">
       {session?.user && (
         <>
+          
           <h1 className="text-4xl text-center font-bold mt-10 ">
             Welcome To  {session?.user?.name}
           </h1>
