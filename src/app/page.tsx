@@ -1,8 +1,8 @@
 "use client" 
-import ScrollToTop from "react-scroll-to-top";
+// import ScrollToTop from "react-scroll-to-top";
 import FirstPage from "./Component/Navbar/shared/Footer/FirstPage/page";
 import { Crete_Round } from "next/font/google";
-import { MdKeyboardArrowUp } from "react-icons/md";
+// import { MdKeyboardArrowUp } from "react-icons/md";
 
 const creteRound = Crete_Round({
   subsets: ["latin"],
@@ -16,7 +16,7 @@ export default function Home() {
       <div className={`${creteRound.variable} font-serif`}>
         
         <FirstPage />
-        <ScrollToTop
+        {/* <ScrollToTop
       style={{
     boxShadow: "none",
     backgroundColor: "#023020",
@@ -33,7 +33,7 @@ export default function Home() {
     />
   }
    smooth
-      top={500} />
+      top={500} /> */}
       </div>
 
     </>
