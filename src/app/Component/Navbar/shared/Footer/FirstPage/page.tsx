@@ -1,12 +1,16 @@
 import Banner from "../Banner/Banner";
+import FivePillars from "../Five/page";
 
 export default function Home() {
   return (
     <>
      
-          <p>
-        <Banner/>
-          </p>
+      <div>
+        <Banner />
+        <FivePillars/>
+      </div>
+       
+          
           
       
      
