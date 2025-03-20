@@ -47,13 +47,14 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
             <li><Link href="/" className="hover:text-yellow-500">Home</Link></li>
             <li><Link href="/event" className="hover:text-yellow-500">Event</Link></li>
             <li><Link href="/contact" className="hover:text-yellow-500">Contact</Link></li>
+            <li><Link href="/dashboard" className="hover:text-yellow-500">Dashboard</Link></li>
             {session?.user ? (
               <li><Link onClick={() => signOut()} href="/login" className="hover:text-yellow-500">LogOut</Link></li>
             ) : (
               <li><Link onClick={() => signOut()} href="/login" className="hover:text-yellow-500">LogIn</Link></li>
             )}
-<li><Link href="/dashboard" className="hover:text-yellow-500">Dashboard</Link></li>
             
+
           </ul>
 
           {/* Icons */}
