@@ -38,6 +38,7 @@ const Navbar: React.FC = () => {
             <li><Link href="/" className="hover:text-yellow-500">Home</Link></li>
             <li><Link href="/event" className="hover:text-yellow-500">Event</Link></li>
             <li><Link href="/contact" className="hover:text-yellow-500">Contact</Link></li>
+            <li><Link href="/login" className="hover:text-yellow-500">Login</Link></li>
           </ul>
 
           {/* Icons */}
