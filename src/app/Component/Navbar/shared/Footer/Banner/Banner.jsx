@@ -9,8 +9,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 // import AboutUS from "@/app/about/page";
 // import History from "../History/page";
-import { Crete_Round } from "next/font/google";
 import History from "../History/page";
+import { Crete_Round } from "next/font/google";
 const creteRound = Crete_Round({
   subsets: ["latin"],
   weight: ["400"], // Crete Round only has a weight of 400
