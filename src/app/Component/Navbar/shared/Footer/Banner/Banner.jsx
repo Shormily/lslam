@@ -89,7 +89,7 @@ const Banner = () => {
                       <br />
                       <span className="my-3"> Save Us</span>
                     </h2>
-                    <button type="button" class="text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-yellow-500/50 dark:shadow-lg dark:shadow-yellow-800/80 font-medium rounded-lg text-md px-5 py-1.5 text-center me-2 mb-2 text-[18px] my-3">Learn more</button>
+                    <button type="button" className="text-white bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-yellow-500/50 dark:shadow-lg dark:shadow-yellow-800/80 font-medium rounded-lg text-md px-5 py-1.5 text-center me-2 mb-2 text-[18px] my-3">Learn more</button>
                   </div>
                 </div>
               </SwiperSlide>
