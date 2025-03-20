@@ -10,6 +10,7 @@ import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 // import AboutUS from "@/app/about/page";
 // import History from "../History/page";
 import { Crete_Round } from "next/font/google";
+import History from "../History/page";
 const creteRound = Crete_Round({
   subsets: ["latin"],
   weight: ["400"], // Crete Round only has a weight of 400
@@ -139,9 +140,9 @@ const Banner = () => {
 
         </div>
       </div>
-      {/* <div className="md:-mt-16 sm:-mt-8 relative z-10 ">
+      <div className="md:-mt-16 sm:-mt-8 relative z-10 ">
         <History />
-      </div> */}
+      </div>
     </div>
 
   );
