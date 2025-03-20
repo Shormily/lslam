@@ -11,7 +11,7 @@ const AboutUS = () => {
                     <div>
                         <Image src="/asset/slide3.png" alt="" width={4000} height={4000} className="md:w-3/4 sm:w-40 h-4/4 justify-center items-center md:m-1 sm:m-auto" />
                     </div>
-                    <div className='justify-center items-center m-auto py-2'>
+                    <div className='justify-center items-center m-auto py-2 px-4'>
                         <p className='text-yellow-500 text-2xl '>About Us</p>
                         <h1 className='text-5xl mt-8 font-bold'>We Can Work Together For Create a Better Future..</h1>
                         <p className='text-[18px] text-gray-600 py-4'>
