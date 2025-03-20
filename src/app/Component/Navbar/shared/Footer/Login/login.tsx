@@ -23,7 +23,7 @@ const Login: React.FC = () => {
             {/* Google Login */}
             <button
               className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200"
-              onClick={() => signIn("google", { callbackUrl: "http://localhost:3000/dashboard" })}
+              onClick={() => signIn("google", { callbackUrl: "https://lslam-7grs.vercel.app/dashboard" })}
             >
               <FcGoogle size={80} />
             </button>
@@ -31,7 +31,7 @@ const Login: React.FC = () => {
             {/* GitHub Login */}
             <button
               className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200"
-              onClick={() => signIn("github", { callbackUrl: "http://localhost:3000/dashboard" })}
+              onClick={() => signIn("github", { callbackUrl: "https://lslam-7grs.vercel.app/dashboard" })}
             >
               <FaGithub size={80} />
             </button>
