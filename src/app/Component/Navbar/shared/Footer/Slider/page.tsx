@@ -21,7 +21,7 @@ const creteRound = Crete_Round({
 const Slide = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const [swiperInstance, setSwiperInstance] = useState(null);
+//   const [setSwiperInstance] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0); // ✅ Track active slide
 
   const data = [
@@ -50,7 +50,7 @@ const Slide = () => {
           effect="fade"
           fadeEffect={{ crossFade: true }}
           speed={1000}
-          onSwiper={setSwiperInstance}
+        //   onSwiper={setSwiperInstance}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // ✅ Track current slide index
         >
           {data.map((d, index) => (
