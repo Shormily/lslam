@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 // import Footer from "../component/shared/Footer/page";
 import { Crete_Round } from "next/font/google";
+import { signIn } from "next-auth/react";
 
 const creteRound = Crete_Round({
   subsets: ["latin"],
@@ -30,7 +31,7 @@ const Login: React.FC = () => {
             {/* GitHub Login */}
             <button
               className="flex items-center justify-center w-32 h-32 bg-white rounded-full shadow-md hover:bg-gray-200"
-            //   onClick={() => signIn("github", { callbackUrl: "http://localhost:3000/dashboard" })}
+              onClick={() => signIn("github", { callbackUrl: "http://localhost:3000/dashboard" })}
             >
               <FaGithub size={80} />
             </button>
