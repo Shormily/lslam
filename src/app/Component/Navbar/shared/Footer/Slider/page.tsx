@@ -118,7 +118,7 @@ const Slide = () => {
         </Swiper>
 
         {/* Navigation Buttons */}
-        <div className="absolute bottom-12 right-8 flex gap-2 z-10 justify-end">
+        <div className="absolute bottom-24 right-8 flex gap-2 z-10 justify-end">
           <button ref={prevRef} className="custom-prev bg-[#E6AC41] text-white w-10 h-10 flex items-center justify-center rounded-sm shadow-md transition-all duration-300 hover:bg-[#D99A2B]">
             <FaArrowLeftLong size={16} />
           </button>
