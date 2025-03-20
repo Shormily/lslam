@@ -38,34 +38,33 @@ const Slide = () => {
     });
   }, []);
 
-  return (
-    <div className={`${creteRound.variable} font-serif`}>
-      <div className="justify-center items-center m-auto">
-        <Swiper
-          modules={[Navigation, Autoplay, EffectFade]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          effect="fade"
-          fadeEffect={{ crossFade: true }}
-          speed={1000}
-        //   onSwiper={setSwiperInstance}
-          onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)} // ✅ Track current slide index
-        >
-          {data.map((d, index) => (
-            <SwiperSlide key={index}>
-              {/* ✅ Re-trigger animation on every slide change */}
-              <motion.div
-                key={activeIndex} // ✅ Force re-render on slide change
-                className="relative w-full sm:h-screen md:h-[750px] bg-cover bg-center bg-no-repeat px-4"
-                style={{ backgroundImage: `url(${d.img})` }}
-                initial={{ scale: 1.2 }} // ✅ Start zoomed-in
-                animate={{ scale: 1 }} // ✅ Zoom-out effect
-                transition={{ duration: 2, ease: "easeOut" }} // ✅ Smooth transition
-              >
-                {/* Centering Wrapper */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center m-auto px-4">
+    return (
+        <div className="relative w-full min-h-screen">
+            <div className={`${creteRound.variable} font-serif`}>
+            <div className="relative w-full min-h-screen"> {/* Ensure full height */}
+      <Swiper
+        modules={[Navigation, Autoplay, EffectFade]}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        speed={1000}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        className="w-full h-screen" /* Ensure full height */
+      >
+        {data.map((d, index) => (
+          <SwiperSlide key={index}>
+            <motion.div
+              key={activeIndex}
+              className="relative w-full h-screen bg-cover bg-center"
+              style={{ backgroundImage: `url(${d.img})` }}
+              initial={{ scale: 1.2 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 2, ease: "easeOut" }}
+            >
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-center m-auto px-4">
                   <Image
                     src="/asset/kalma.png"
                     alt="Kalma"
@@ -76,25 +75,26 @@ const Slide = () => {
                   />
 
                   <div className="py-24 text-center ">
-                    <div className="flex gap-4 pb-8">
-                      <Image
-                        src="/asset/line.png"
-                        alt="Line"
-                        width={250}
-                        height={150}
-                        className="items-center justify-center m-auto"
-                        data-aos="fade-up"
-                      />
-                      <p className="text-white text-2xl text-center">Assalamu Alaikum</p>
-                      <Image
-                        src="/asset/line.png"
-                        alt="Line"
-                        width={250}
-                        height={100}
-                        className="items-center justify-center m-auto"
-                        data-aos="fade-up"
-                      />
-                    </div>
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pb-8">
+  <Image
+    src="/asset/line.png"
+    alt="Line"
+    width={250}
+    height={150}
+    className="w-28 sm:w-40 md:w-60"
+    data-aos="fade-up"
+  />
+  <p className="text-white text-lg sm:text-xl md:text-2xl text-center">Assalamu Alaikum</p>
+  <Image
+    src="/asset/line.png"
+    alt="Line"
+    width={250}
+    height={100}
+    className="w-28 sm:w-40 md:w-60"
+    data-aos="fade-up"
+  />
+</div>
+
                     <h2 className="text-white font-semibold text-5xl pb-8" data-aos="fade-up">
                       Allah and His angels send blessings
                       <br />
@@ -112,22 +112,28 @@ const Slide = () => {
                     </button>
                   </div>
                 </div>
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
-        {/* Navigation Buttons */}
-        <div className="absolute bottom-24 right-8 flex gap-2 z-10 justify-end">
-          <button ref={prevRef} className="custom-prev bg-[#E6AC41] text-white w-10 h-10 flex items-center justify-center rounded-sm shadow-md transition-all duration-300 hover:bg-[#D99A2B]">
-            <FaArrowLeftLong size={16} />
-          </button>
-          <button ref={nextRef} className="custom-next bg-[#E6AC41] text-white w-10 h-10 flex items-center justify-center rounded-sm shadow-md transition-all duration-300 hover:bg-[#D99A2B]">
-            <FaArrowRightLong size={16} />
-          </button>
-        </div>
+      {/* Navigation Buttons */}
+      <div className="absolute bottom-10 right-10 flex gap-2 z-10">
+        <button ref={prevRef} className="custom-prev bg-[#E6AC41] text-white w-12 h-12 flex items-center justify-center rounded-sm shadow-md transition-all duration-300 hover:bg-[#D99A2B]">
+          <FaArrowLeftLong size={20} />
+        </button>
+                        <button ref={nextRef} className="custom-next bg-[#E6AC41] text-white w-12 h-12 flex items-center justify-center rounded-sm shadow-md transition-all duration-300 hover:bg-[#D99A2B]  
+        
+        ">
+          <FaArrowRightLong size={20} />
+        </button>
       </div>
     </div>
+     
+    </div>
+        </div>
+        
+    
   );
 };
 
