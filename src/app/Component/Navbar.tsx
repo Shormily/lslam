@@ -1,6 +1,5 @@
 "use client";
 
-// import { useSession, signIn, signOut } from "next-auth/react";
 import { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
@@ -16,12 +15,11 @@ const creteRound = Crete_Round({
   variable: "--font-crete-round",
 });
 
-const Navbar = () => {
-  // const { data: session } = useSession(); // Fetch session on the client side
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const Navbar: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMobileMenu = (): void => {
+    setIsMobileMenuOpen((prev) => !prev);
   };
 
   return (
@@ -38,21 +36,8 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <ul className="hidden lg:flex gap-8 text-white text-[18px]">
             <li><Link href="/" className="hover:text-yellow-500">Home</Link></li>
-            {/* <li><Link href="/event" className="hover:text-yellow-500">Event</Link></li>
-            <li><Link href="/contact" className="hover:text-yellow-500">Contact</Link></li> */}
-            {/* {session?.user ? (
-              <li>
-                <button onClick={() => signOut()} className="hover:text-yellow-500">
-                  Log Out
-                </button>
-              </li>
-            ) : (
-              <li>
-                <button onClick={() => signIn()} className="hover:text-yellow-500">
-                  Log In
-                </button>
-              </li>
-            )} */}
+            <li><Link href="/event" className="hover:text-yellow-500">Event</Link></li>
+            <li><Link href="/contact" className="hover:text-yellow-500">Contact</Link></li>
           </ul>
 
           {/* Icons */}
@@ -81,19 +66,6 @@ const Navbar = () => {
             <li><Link href="/" className="block hover:text-green-700">Home</Link></li>
             <li><Link href="/event" className="block hover:text-green-700">Event</Link></li>
             <li><Link href="/contact" className="block hover:text-green-700">Contact</Link></li>
-            {/* {session?.user ? (
-              <li>
-                <button onClick={() => signOut()} className="hover:text-green-700">
-                  Log Out
-                </button>
-              </li>
-            ) : (
-              <li>
-                <button onClick={() => signIn()} className="hover:text-green-700">
-                  Log In
-                </button>
-              </li>
-            )} */}
           </ul>
         </div>
       </div>
