@@ -3,8 +3,8 @@ import Slide from '../Component/Navbar/shared/Footer/Slider/page';
 import EventBanner from '../Component/Navbar/shared/Footer/EventBanner/EventBanner';
 import Events from '../Component/Navbar/shared/Footer/Event/Event';
 import FivePillars from '../Component/Navbar/shared/Footer/Five/page';
-import { MdKeyboardArrowUp } from 'react-icons/md';
-import ScrollToTop from 'react-scroll-to-top';
+// import { MdKeyboardArrowUp } from 'react-icons/md';
+// import ScrollToTop from 'react-scroll-to-top';
 
 const page = () => {
     return (
@@ -13,7 +13,7 @@ const page = () => {
             <EventBanner />
             <Events />
             <FivePillars />
-            <ScrollToTop
+            {/* <ScrollToTop
       style={{
     boxShadow: "none",
     backgroundColor: "#023020",
@@ -30,7 +30,7 @@ const page = () => {
     />
   }
    smooth
-      top={500} />
+      top={500} /> */}
         </>
     );
 };

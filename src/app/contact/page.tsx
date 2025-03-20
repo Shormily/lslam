@@ -1,12 +1,12 @@
-import { MdKeyboardArrowUp } from "react-icons/md";
+// import { MdKeyboardArrowUp } from "react-icons/md";
 import ContactPage from "../Component/Navbar/shared/Footer/Contact/page";
-import ScrollToTop from "react-scroll-to-top";
+// import ScrollToTop from "react-scroll-to-top";
 
 const page: React.FC = () => {
     return (
         <>
             <ContactPage />  
-            <ScrollToTop
+            {/* <ScrollToTop
       style={{
     boxShadow: "none",
     backgroundColor: "#023020",
@@ -23,7 +23,7 @@ const page: React.FC = () => {
     />
   }
    smooth
-      top={500} />
+      top={500} /> */}
         </>
     );
 };
