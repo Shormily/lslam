@@ -79,7 +79,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
             <FaTimes size={24} />
           </button>
           <ul className="mt-16 space-y-4 text-lg font-semibold">
-            <li><Link href="/" className="block hover:text-green-700">Home</Link></li>
+            <li><Link href="/" className="block hover:text-green-700 font-bold">Home</Link></li>
             <li><Link href="/event" className="block hover:text-green-700">Event</Link></li>
             <li><Link href="/contact" className="block hover:text-green-700">Contact</Link></li>
             <li><Link href="/dashboard" className="hover:text-yellow-500">Dashboard</Link></li>

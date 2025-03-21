@@ -14,9 +14,9 @@ const Icons = () => {
         initial={{ y: -750 }}
         animate={{ y: -10 }}
         transition={{ delay: 4, duration: 2, type: 'spring', stiffness: 500 }}
-        className=" lg:flex fixed flex-col top-[30%] left-0"
+        className=" lg:flex fixed flex-col top-[30%] left-0 z-50"
       >
-        <ul className='hidden md:block ' >
+        <ul className='' >
           <li className="w-[160px] h-[60px] z-10 flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 rounded-l-lg github-style">
             <a
               target="_blank"
